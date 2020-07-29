@@ -8,10 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Prathyushas AWESOME Project';
   emittedEvent = "";
-  myFunction(): void { 
-       alert('Successfully bound!'); 
-   } 
-   emitThisEvent($event){
+
+  emitThisEvent($event){
       this.emittedEvent = $event;
-   }
+  }
 }
