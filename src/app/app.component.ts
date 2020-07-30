@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Prathyushas AWESOME Project';
-  emittedEvent = "";
+  emittedValue = "";
 
   emitThisEvent($event){
-      this.emittedEvent = $event;
+      this.emittedValue = $event;
   }
 }
