@@ -332,6 +332,10 @@
 
   <hello title = "{{ title }}" (testEvent)="emitThisEvent($event);"></hello>
   <p>Emitted Value={{emittedValue}}</p>
+
+  <input [(ngModel)] = "username">
+
+  <p>Hello {{username}}!</p>
     <!-- <span>{{ title }} app is running!</span> -->
 
     <!-- <svg id="rocket-smoke" alt="Rocket Ship Smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632">
