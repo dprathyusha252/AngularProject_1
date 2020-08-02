@@ -2,6 +2,7 @@
   <p>Current counter: {{counter}}<br><br></p>
   <button (click)="modifyCounter()">Increment 100</button>
   <hello [(counter)]="counter"></hello>
+  <!-- above line is same as <hello [counter]="counter" (counterChange)="this.counter=$event"></hello> -->
 
  
 
