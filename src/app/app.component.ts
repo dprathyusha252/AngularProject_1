@@ -2,15 +2,15 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: 'app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'Prathyusha\'s AWESOME Project';
-  emittedValue = "";
-  username = "";
+  counter: number = 100;
 
-  emitThisEvent($event){
-      this.emittedValue = $event;
+  modifyCounter(){
+    this.counter += 100;
   }
+
 }

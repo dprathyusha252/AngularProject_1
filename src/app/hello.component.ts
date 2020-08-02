@@ -3,13 +3,19 @@ import { Component, Input,Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'hello',
   template:
-    '<h1> {{title}}!</h1> <button (click)="emitEvent()"> Emit an Event </button>'
+    `<br><br>Child: {{title}} <br><br> 
+    <span>Amount available: {{counter}}</span><br><br>
+    <button (click)="decrement()">Decrement 100 </button>`
 })
+
 export class HelloComponent {
   @Input() title: string;
-  @Output() testEvent = new EventEmitter();
+  @Input() counter: number;
 
-  public emitEvent() {
-    this.testEvent.emit('Hey you successfully emitted an event from Child component');
+  @Output() counterChange = new EventEmitter();
+
+  decrement(){
+    this.counter -= 100;
+    this.counterChange.emit(this.counter);
   }
 }
